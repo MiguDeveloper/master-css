@@ -1,0 +1,124 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.clear-fix {
+  float: none;
+  clear: both;
+}
+
+#container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+header {
+  background-color: #cdcdcd;
+  display: block;
+  height: 100px;
+  line-height: 70px;
+  text-align: center;
+  width: 100%;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 45px;
+}
+
+nav {
+  background-color: #eeeeee;
+  display: block;
+  width: 100%;
+}
+
+nav a {
+  color: #444;
+  display: block;
+  padding: 10px;
+  text-transform: capitalize;
+}
+nav ul li {
+  border-right: 1px solid #ccc;
+  display: block;
+  float: left;
+}
+
+nav ul li:hover {
+  background-color: rgb(16, 75, 143);
+}
+
+nav ul li:hover a {
+  color: white;
+}
+
+#lateral {
+  display: block;
+  float: left;
+  width: 30%;
+}
+
+#main-content {
+  display: block;
+  float: left;
+  width: 70%;
+}
+
+#main-content .caja {
+  background-color: beige;
+  border: 1px solid #cdcdcd;
+  box-shadow: 1px 1px 3px #cdcdcd;
+  display: block;
+  float: left;
+  height: 250px;
+  margin: 15px;
+  padding: 20px;
+  width: 40%;
+}
+
+footer {
+  background-color: #eeeeee;
+  color: #444;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  width: 100%;
+}
+
+#redes-fixed {
+  font-size: 13px;
+  position: fixed;
+  top: 45%;
+  left: 0;
+}
+.red-social {
+  border-radius: 0 4px 4px 0;
+  color: white;
+  display: block;
+  padding: 0.75rem;
+}
+
+#facebook {
+  background-color: cornflowerblue;
+}
+
+#facebook:hover .red-social-descripcion{
+    display: block;
+    width: 100px;
+}
+
+#twitter {
+  background-color: darkturquoise;
+}
+
+#instagram {
+  background-color: blueviolet;
+}
+
+.red-social-descripcion {
+    display: none;
+}

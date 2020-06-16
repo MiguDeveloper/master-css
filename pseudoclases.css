@@ -1,0 +1,46 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+ul li:first-child {
+  color: blueviolet;
+  font-weight: bold;
+}
+
+ul li:nth-child(3) {
+  color: chocolate;
+}
+
+ul li:last-child {
+  color: aqua;
+}
+
+.enlace:link {
+  color: brown;
+}
+
+.enlace:visited {
+  color: aqua;
+}
+
+.enlace:hover{
+    color: cadetblue;
+}
+
+.enlace:active{
+    font-style: italic;
+}
+
+input[type="text"]{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+input[type="text"]:hover{
+    border: 1px solid #ccddcc;
+}

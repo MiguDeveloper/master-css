@@ -1,0 +1,99 @@
+/* 
+Selector universal * el asterisco
+*/
+* {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+selector de etiqueta: h1, a, span, etc
+*/
+body{
+    margin: 0 auto;
+    width: 1200px;
+}
+h1 {
+  color: cadetblue;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+footer a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+ul a{
+    color: cornflowerblue;
+}
+
+/*
+selector de id
+*/
+#contenedor {
+  border: 1px solid #cccccc;
+}
+
+/*
+selector de clase
+*/
+.titulo-noticia {
+    text-transform: capitalize;
+}
+
+/* selector de atributo: bastante usado en formularios*/
+form{
+    border: 1px solid #cccccc;
+    padding: 10px;
+    margin-top: 12px;
+}
+
+form * {
+    display: block;
+}
+
+input[type="text"]{
+    margin-bottom: 5px;
+    padding: 2px;
+}
+
+input[type="submit"]{
+    background: #cccccc;
+    cursor: pointer;
+    padding: 4px;
+    text-transform: uppercase;
+}
+
+/* selector hijo */
+#temario > li > ul > li > a {
+    color: blueviolet;
+}
+
+/* Importar una fuente */
+@font-face{
+    font-family: NombreDeTuFuenteElegida;
+    src: url();
+}
+
+/* 
+ - Para los colores de fuentes tenemos los: default colors, hexadecimales, rgb, rgba(0, 0, 0, que incorpora la opacidad) 
+ - Cuando tenemos background es recomendable siempre usar la propiedad especifica, por ejemplo: background-image. 
+ por ejemplo si usamos una foto de fondo y no queremos que se pierda con el scroll le ponemos la propiedad:
+ background-attachment: fixed
+*/
+
+#container {
+    border: 1xp solid #cccccc;
+}
+
+.caja{
+    display: block;
+    float: left;
+    width: 250px;
+    height: 250px;
+    background-color: beige;
+    border: 1px solid #cdcdcd;
+    margin: 15px;
+    padding: 20px;
+}
