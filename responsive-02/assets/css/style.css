@@ -1,0 +1,496 @@
+/* importacion de fuentes*/
+@font-face {
+  font-family: 'TrebuchetMS';
+  src: url('../fonts/TrebuchetMS.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../fonts/BebasNeue.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WebSymbolsRegular';
+  src: url('../fonts/websymbols-regular-webfont.eot') format('eot');
+  src: url('../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular')
+      format('svg'),
+    url('../fonts/websymbols-regular-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/websymbols-regular-webfont.woff') format('woff'),
+    url('../fonts/websymbols-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* generales */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('../img/pattern.png');
+}
+
+.wrap {
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.gear,
+.icon {
+  font-family: 'WebSymbolsRegular';
+}
+
+.clear-fix {
+  clear: both;
+  width: 100%;
+}
+/* cabecera */
+#header {
+  background-color: black;
+  color: white;
+  font-family: 'BebasNeue';
+  width: 100%;
+  height: 70px;
+}
+
+#logo {
+  background-color: #37bcf9;
+  float: left;
+  width: 200px;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 300ms;
+  margin: 8px 20px 0 0;
+}
+
+#logo h3 {
+  display: block;
+  float: right;
+  font-size: 40px;
+  margin: 5px 65px 0 0;
+  transition: all 300ms;
+}
+
+#logo .gear {
+  display: block;
+  float: left;
+  font-size: 30px;
+  margin: 8px 0 0 26px;
+}
+
+#menu {
+  background-color: black;
+  float: right;
+  margin: 0 15% 0 0;
+  height: 70px;
+}
+#menu ul li {
+  font-size: 24px;
+  display: inline-block;
+  margin: 0 20px 0;
+  letter-spacing: 1px;
+  line-height: 70px;
+}
+
+#menu ul li a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  transition: all 200ms;
+}
+
+#menu ul li a:hover {
+  color: #37bcf9;
+  transform: scale(1.2, 1.2);
+}
+
+/* banner */
+#banner {
+  background-image: url('../img/bakbaner.png');
+  background-position: -200px -200px;
+  border: 10px solid white;
+  box-shadow: 0 0 2px gray;
+  width: 98%;
+  height: 100px;
+  margin: 20px auto;
+}
+
+#banner h1 {
+  display: block;
+  width: 850px;
+  font-family: 'BebasNeue';
+  color: white;
+  font-size: 45px;
+  letter-spacing: 2px;
+  margin: 27px auto;
+  font-weight: normal;
+  text-shadow: 2px 2px 1px black;
+}
+
+/* cards*/
+#cards {
+  width: 100%;
+}
+
+.card {
+  overflow: hidden;
+  margin: 40px 20px 17px 0;
+  width: 215px;
+  height: 305px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #dddddd;
+  float: left;
+  background-color: white;
+  cursor: pointer;
+  color: #00538c;
+  font-family: TrebuchetMS;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 28px;
+}
+
+.card:last-child {
+  margin-right: 0px;
+}
+
+.card .icon {
+  display: block;
+  width: 100%;
+  height: 130px;
+  font-size: 50px;
+  line-height: 110px;
+  text-align: center;
+  margin: 0px auto;
+
+  color: black;
+}
+
+.category {
+  width: 100%;
+  height: 50px;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.description {
+  color: #0370b9;
+  font-size: 13px;
+}
+
+/* lateral*/
+#lateral {
+  width: 300px;
+  min-height: 1200px;
+  font-family: 'TrebuchetMS';
+  float: right;
+}
+
+aside h3,
+#articles h2 {
+  background: url('../img/pxgray.png') white;
+  box-shadow: 0 1px 0 #393d3f, 1px 2px 0 #393d3f, 2px 3px 0 #393d3f,
+    3px 4px 0px #393d3f;
+  font-family: 'BebasNeue';
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+aside h3 {
+  display: block;
+  width: auto;
+  height: 45px;
+  line-height: 49px;
+  font-size: 30px;
+  padding-left: 15px;
+  margin: 30px 0 15px;
+}
+
+#search {
+  width: 85%;
+  height: 30px;
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 4px #ccc inset;
+}
+
+#lateral input[type='text'] {
+  width: 87%;
+  height: 30px;
+  border: none;
+  padding-left: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ccc;
+  transition: all 300ms;
+}
+
+#lateral input[type='text']:focus {
+  color: #555;
+}
+
+#lateral input[type='button'] {
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid #ccc;
+  color: #555;
+  padding-left: 6px;
+  margin-left: -3px;
+}
+.aside-box {
+  width: 85%;
+  height: 240px;
+  margin: 20px auto 0;
+  padding-top: 2px;
+  background-color: white;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.3),
+    0 1px 0 white inset, 0 1px white inset, 0 -3px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+#login input[type='email'],
+#login input[type='password'] {
+  display: block;
+  margin: 20px auto 0;
+  width: 83%;
+  height: 32px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #ccc inset;
+  border-radius: 5px;
+  padding-left: 28px;
+  color: gray;
+}
+
+#login input[type='email']:focus,
+#login input[type='password']:focus {
+  color: #555;
+  box-shadow: 1px 1px 1px grey inset;
+}
+#login #password,
+#login #user {
+  display: block;
+  position: absolute;
+  text-align: center;
+  height: 30px;
+}
+#login #user {
+  margin: 9px 0 9px 14px;
+}
+#login #password {
+  margin: 31px 0 0 18px;
+}
+
+#login input[type='button'] {
+  text-align: center;
+  width: 100px;
+  height: 35px;
+  margin-top: 20px;
+  color: white;
+  background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
+  border: 1px solid #156785;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: TrebuchetMS;
+  font-weight: lighter;
+  margin-left: 17px;
+  transition: all 300ms;
+  margin-bottom: 20px;
+}
+
+#login input[type='button']:hover {
+  box-shadow: 0 0 3px gray;
+}
+
+#login a {
+  display: block;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+  color: #555555;
+}
+
+#login a:hover {
+  text-decoration: underline;
+  color: #2f78bc;
+}
+
+#social {
+  height: 190px;
+}
+
+#social a {
+  display: block;
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+  margin: 10px 0 20px 20px;
+}
+
+/* articles */
+#articles {
+  float: left;
+  width: 794px;
+  min-height: 1200px;
+}
+
+#articles h2 {
+  display: block;
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  font-family: 'BebasNeue';
+  font-size: 40px;
+  margin: 30px 0 15px;
+}
+
+article {
+  font-family: TrebuchetMS;
+}
+
+#articles article {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #ddd;
+  margin: 0 0 31px;
+  background-color: white;
+  padding: 16px 10px;
+}
+
+article .data {
+  float: right;
+  color: white;
+  background-color: #393d3f;
+  padding: 8px 9px;
+  border-radius: 0 0 0 6px;
+  font-size: 12px;
+  margin: -17px -10px 0;
+}
+
+article h4 {
+  margin-bottom: 8px;
+  font-size: 23px;
+}
+
+article h4 a {
+  text-decoration: none;
+  color: #00538c;
+  font-weight: bold;
+}
+
+article h4 a:hover {
+  text-decoration: underline;
+}
+
+article p {
+  color: black;
+  font-size: 14px;
+}
+
+.data span:first-child {
+  margin-right: 12px;
+}
+
+#blog {
+  height: 100px;
+  margin-top: 60px;
+  line-height: 100px;
+  text-align: center;
+}
+
+#blog a {
+  display: block;
+  font-family: 'BebasNeue';
+  font-size: 40px;
+  letter-spacing: 3px;
+  color: #00538c;
+  text-decoration: none;
+}
+
+#footer {
+  width: 100%;
+  height: 470px;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+/* con el '>'  indicamos los que esten directemente despues de footer ojo*/
+#footer .wrap > div {
+  float: left;
+  width: 320px;
+  height: 370px;
+  margin: 40px;
+  color: white;
+  font-family: TrebuchetMS;
+}
+
+footer a {
+  text-decoration: none;
+  color: #37bcf9;
+  transition: all 300ms;
+}
+
+footer h5 {
+  display: block;
+  background: url('../img/pxgray.png'), white;
+  height: 50px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: 'BebasNeue';
+  font-size: 40px;
+  line-height: 55px;
+  color: black;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+#menu-footer ul {
+  text-align: left;
+  display: block;
+  margin: 20px;
+}
+
+#menu-footer ul li {
+  font-size: 20px;
+  margin-top: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#menu-footer ul li.active {
+  border-bottom: none;
+}
+
+#menu-footer ul li a {
+  display: block;
+  padding-bottom: 15px;
+}
+
+#location iframe {
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 5px solid white;
+  box-shadow: 0 0 5px gray;
+}
+
+#footer img {
+  margin-bottom: 15px;
+}
+
+#info #browsers img {
+  width: 45px;
+}

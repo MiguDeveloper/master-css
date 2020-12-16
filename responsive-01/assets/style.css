@@ -1,0 +1,91 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: azure;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+#container {
+  background-color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px auto 40px;
+  width: 75%;
+}
+
+header {
+  height: 150px;
+  width: 100%;
+  background-color: lightblue;
+  color: #333333;
+  line-height: 150px;
+  text-align: center;
+}
+
+aside {
+  width: 25%;
+  background-color: #cccccc;
+  float: left;
+  min-height: 700px;
+  text-align: center;
+  line-height: 700px;
+}
+
+#articles {
+  float: left;
+  background-color: lemonchiffon;
+  width: 75%;
+  min-height: 700px;
+}
+
+#articles article {
+  width: 25%;
+  height: 150px;
+  background-color: green;
+  color: white;
+  line-height: 150px;
+  text-align: center;
+  border: 2px solid white;
+  float: left;
+  margin: 15px;
+}
+
+/* Responsive: desde la anchura 0px hasta 888px habran estos estilos */
+@media (max-width: 888px) {
+  #articles article {
+    width: 40%;
+    background: red;
+  }
+}
+
+@media (max-width: 632px) {
+  #container {
+    overflow: hidden;
+  }
+  aside {
+    float: none;
+    min-height: auto;
+    line-height: 20px;
+    width: 91%;
+    padding: 19px;
+  }
+  #articles {
+    width: 100%;
+  }
+  #articles article {
+    width: 90%;
+    background-color: blue;
+  }
+}
+
+@media (max-width: 554px) {
+  body {
+    background-color: salmon;
+  }
+}
