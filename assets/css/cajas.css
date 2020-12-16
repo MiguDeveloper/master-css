@@ -104,21 +104,36 @@ footer {
 
 #facebook {
   background-color: cornflowerblue;
+  width: 100px;
 }
 
-#facebook:hover .red-social-descripcion{
-    display: block;
-    width: 100px;
+.red-social-descripcion {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+#facebook:hover .red-social-descripcion {
+  opacity: 1;
+  animation: animacionCajaRedSocial 400ms linear;
+  display: block;
+}
+
+@keyframes animacionCajaRedSocial {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 
 #twitter {
   background-color: darkturquoise;
+  width: 100px;
 }
 
 #instagram {
   background-color: blueviolet;
-}
-
-.red-social-descripcion {
-    display: none;
+  width: 100px;
 }
