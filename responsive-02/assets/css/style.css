@@ -79,11 +79,59 @@ body {
   transition: all 300ms;
 }
 
+#logo:hover h3 {
+  animation: deDerecha 300ms linear;
+}
+
+@keyframes deDerecha {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
 #logo .gear {
   display: block;
   float: left;
   font-size: 30px;
   margin: 8px 0 0 26px;
+  animation-name: rotar-gear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotar-gear {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+#logo:hover {
+  border-radius: 2px;
+  color: black;
+  background-color: #ccc;
+}
+
+#logo:hover .gear {
+  animation: deAbajo 500ms linear;
+}
+
+@keyframes deAbajo {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 #menu {
@@ -121,6 +169,17 @@ body {
   width: 98%;
   height: 100px;
   margin: 20px auto;
+  animation: animacionFondo 10s linear;
+  overflow: hidden;
+}
+
+@keyframes animacionFondo {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200px -200px;
+  }
 }
 
 #banner h1 {
@@ -133,8 +192,31 @@ body {
   margin: 27px auto;
   font-weight: normal;
   text-shadow: 2px 2px 1px black;
+  animation: animacionTexto 10s linear;
 }
 
+@keyframes animacionTexto {
+  0% {
+    transform: translateX(-600%) scale(5, 5);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(600%) scale(5, 5);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(-600%) scale(5, 5);
+    text-shadow: none;
+    color: transparent;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%) scale(1, 1);
+    text-shadow: 2px 2px 1px black;
+    color: white;
+    opacity: 1;
+  }
+}
 /* cards*/
 #cards {
   width: 100%;
@@ -155,6 +237,11 @@ body {
   font-size: 14px;
   text-align: center;
   margin-right: 28px;
+  transition: all 300ms;
+}
+
+.card:hover {
+  background-color: black;
 }
 
 .card:last-child {
@@ -169,20 +256,69 @@ body {
   line-height: 110px;
   text-align: center;
   margin: 0px auto;
-
+  transition: all 300ms;
   color: black;
 }
 
-.category {
+.card:hover .icon {
+  font-size: 70px;
+  color: #37bcf9;
+  animation: mostrarIcon 300ms linear;
+}
+
+@keyframes mostrarIcon {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.card .category {
   width: 100%;
   height: 50px;
   font-size: 21px;
   font-weight: bold;
+  transition: all 300ms linear;
 }
 
-.description {
+.card:hover .category {
+  color: white;
+  animation: animacionCategory 400ms linear;
+}
+
+@keyframes animacionCategory {
+  from {
+    transform: translateY(-300%);
+    color: black;
+  }
+  to {
+    transform: translateY(0%);
+    color: white;
+  }
+}
+
+.card .description {
   color: #0370b9;
   font-size: 13px;
+  transition: all 300ms linear;
+}
+
+.card:hover .description {
+  color: white;
+  animation: animacionDescripcion 300ms linear;
+}
+
+@keyframes animacionDescripcion {
+  from {
+    transform: translateX(-300%);
+    color: black;
+  }
+  to {
+    transform: translateX(0%);
+    color: white;
+  }
 }
 
 /* lateral*/
@@ -336,6 +472,29 @@ aside h3 {
   text-decoration: none;
   margin: 10px 0 20px 20px;
 }
+#social .overlay {
+  display: block;
+  height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 1px #ccc;
+  border: 3px solid white;
+  box-shadow: 0 0 4px #ccc;
+  background-color: #f4f7fe;
+  position: absolute;
+  padding: 5px;
+  margin-left: 70px;
+  margin-top: -54px;
+  transform: translateX(-80%);
+  opacity: 0;
+  transition: all 400ms;
+}
+
+#social div:hover .overlay {
+  opacity: 1;
+  transform: translateX(0%);
+}
 
 /* articles */
 #articles {
@@ -408,6 +567,7 @@ article p {
   margin-top: 60px;
   line-height: 100px;
   text-align: center;
+  transition: all 1s;
 }
 
 #blog a {
@@ -417,6 +577,39 @@ article p {
   letter-spacing: 3px;
   color: #00538c;
   text-decoration: none;
+  transition: all 1s;
+}
+
+#blog:hover {
+  background-color: #333;
+  border: 10px solid #37bcf9;
+  border-radius: 240px;
+  box-shadow: 0 0 10px gray;
+  animation: parpadear 10s infinite linear;
+}
+
+@keyframes parpadear {
+  0% {
+    border: 10px solid #37bcf9;
+  }
+  25% {
+    border: 10px solid green;
+  }
+  50% {
+    border: 10px solid yellow;
+  }
+  75% {
+    border: 10px solid white;
+  }
+  100% {
+    border: 10px solid #37bcf9;
+  }
+}
+
+#blog:hover a {
+  color: white;
+  text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black,
+    1px 4px 1px black, 1px 5px 1px black, 1px 6px 1px black;
 }
 
 #footer {
@@ -476,6 +669,13 @@ footer h5 {
 #menu-footer ul li a {
   display: block;
   padding-bottom: 15px;
+  transition: all 300ms;
+}
+
+#menu-footer ul li a:hover {
+  padding-left: 40px;
+  color: white;
+  width: 100%;
 }
 
 #location iframe {
