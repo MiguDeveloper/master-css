@@ -184,7 +184,7 @@ body {
 
 #banner h1 {
   display: block;
-  width: 850px;
+  width: 100%;
   font-family: 'BebasNeue';
   color: white;
   font-size: 45px;
@@ -224,7 +224,7 @@ body {
 
 .card {
   overflow: hidden;
-  margin: 40px 20px 17px 0;
+  margin: 40px 28px 17px 0;
   width: 215px;
   height: 305px;
   border: 1px solid #ccc;
@@ -236,7 +236,6 @@ body {
   font-family: TrebuchetMS;
   font-size: 14px;
   text-align: center;
-  margin-right: 28px;
   transition: all 300ms;
 }
 
@@ -624,7 +623,7 @@ article p {
 #footer .wrap > div {
   float: left;
   width: 320px;
-  height: 370px;
+  min-height: 370px;
   margin: 40px;
   color: white;
   font-family: TrebuchetMS;

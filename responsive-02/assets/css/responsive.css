@@ -1,0 +1,181 @@
+@media (max-width: 1220px) {
+  .wrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #banner h1 {
+    font-size: 35px;
+    text-align: center;
+    margin: 33px auto;
+  }
+  .card {
+    width: 17%;
+    margin: 40px 3% 17px 0;
+  }
+
+  .card .description {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 11px;
+  }
+
+  .card .category {
+    font-size: 16px;
+  }
+
+  #articles {
+    width: 57%;
+  }
+
+  #articles article {
+    width: 95%;
+  }
+
+  #footer .wrap > div {
+    width: 25%;
+    margin: 4%;
+  }
+
+  #info #browsers img {
+    width: 11%;
+  }
+
+  footer h5 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 791px) {
+  .card .category {
+    font-size: 14px;
+  }
+  #articles {
+    width: 52%;
+  }
+  #lateral {
+    width: 44%;
+  }
+}
+
+@media (max-width: 720px) {
+  #banner h1 {
+    font-size: 28px;
+  }
+  #articles {
+    width: 49%;
+  }
+  footer h5 {
+    font-size: 18px;
+  }
+  #info > p:last-child {
+    font-size: 10px;
+  }
+  #lateral input[type='text'] {
+    width: 86%;
+  }
+
+  #login input[type='button'] {
+    margin-left: 6px;
+    margin-bottom: 21px;
+    width: 100px;
+  }
+
+  #menu {
+    margin: 0 10% 0 0;
+  }
+
+  #menu ul li {
+    font-size: 18px;
+    margin: 0 13px 0;
+  }
+
+  article .data {
+    font-size: 10px;
+  }
+
+  article h4 {
+    font-size: 16px;
+  }
+
+  article p {
+    font-size: 11px;
+  }
+
+  #creadoImg {
+    width: 80%;
+  }
+
+  #articles h2 {
+    font-size: 30px;
+  }
+
+  aside h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 440px) {
+  #lateral {
+    width: 100%;
+  }
+  #articles {
+    width: 100%;
+  }
+  .card {
+    width: 45%;
+  }
+
+  #banner {
+    width: 93%;
+  }
+
+  #banner h1 {
+    font-size: 17px;
+  }
+
+  #logo {
+    margin: 8px 6px 0 0;
+    width: 79px;
+  }
+
+  #logo .gear {
+    font-size: 15px;
+    margin: 8px 0 0 10px;
+  }
+
+  #logo h3 {
+    font-size: 21px;
+    margin: 5px 12px 0 0;
+  }
+
+  #menu {
+    margin: 0;
+    height: 34px;
+  }
+
+  #menu ul li {
+    font-size: 11px;
+    margin: 0 4px 0;
+    line-height: 48px;
+  }
+
+  #menu ul li a {
+    font-size: 11px;
+  }
+
+  #footer {
+    height: auto;
+  }
+  #footer .wrap > div {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    min-height: 256px;
+  }
+
+  #footer h5 {
+    font-size: 25px;
+  }
+}
