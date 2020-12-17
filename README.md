@@ -58,3 +58,21 @@
   }
 }
 ```
+
+## Instalar y Compilar Sass
+
+Para instalar solo ejecutamos el comando
+
+```shell
+$ sudo npm i -g sass
+```
+
+nos dirigimos a la carpeta del proyecto y ejecutamos el comando:
+
+```shell
+$ sass --watch style.scss style.css
+```
+
+### Mixins
+
+son conocidas con este termino pero son simple funciones que como tal agrupan una funcionalidad
