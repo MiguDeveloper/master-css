@@ -1,0 +1,80 @@
+/* variables */
+$fuente-tipica: sans-serif, Helvetica, Arial;
+$color-fondo: #ccc;
+$color-letra: red;
+$color-secundario: rgb(122, 20, 20);
+
+// Mixins (funciones)
+@mixin crearBordes($color, $size, $shadow) {
+  border: $size solid $color;
+  border-radius: $size;
+  box-shadow: 0 0 $size $shadow;
+}
+
+// Herencia
+%alert-normal {
+  border: 1px solid gray;
+  background: #eee;
+  color: gray;
+  padding: 10px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.alert {
+  @extend %alert-normal;
+}
+
+.alert-warning {
+  @extend %alert-normal;
+  color: red;
+  border-color: yellow;
+}
+
+.alert-success {
+  @extend %alert-normal;
+  color: green;
+  border-color: green;
+}
+
+body {
+  background-color: $color-fondo;
+}
+
+h1 {
+  color: $color-letra;
+  font-family: $fuente-tipica;
+}
+
+p {
+  color: $color-secundario;
+}
+
+/* Nesting (anidamiento)*/
+.caja {
+  border: 1px solid black;
+  background-color: white;
+  width: 500px;
+  margin: 0px auto;
+  text-align: center;
+  padding: 10px;
+  @include crearBordes(red, 10px, black);
+
+  h1 {
+    color: blue;
+  }
+  p {
+    color: green;
+  }
+  .info {
+    font-size: 10px;
+    .author {
+      font-size: 15px;
+      color: orange;
+    }
+  }
+}
+
+.listado {
+  @include crearBordes(green, 5px, yellow);
+}
