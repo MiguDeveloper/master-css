@@ -78,3 +78,46 @@ p {
 .listado {
   @include crearBordes(green, 5px, yellow);
 }
+
+// operadores nos permiten realizar operaciones matemáticas
+h1 {
+  font-size: 20px + 5px - 1px;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+$caja-tamanio: 200px;
+$wrap: 900px;
+
+.cajas {
+  width: $wrap;
+  margin: 0 auto;
+}
+
+.caja {
+  float: left;
+  width: $caja-tamanio / $wrap * 100%;
+}
+
+// Estructuras de control
+
+// Condicionales
+h1 {
+  @if $color-fondo == #ccc {
+    color: black;
+  } @else if $color-fondo == black {
+    color: lightsalmon;
+  } @else {
+    color: pink;
+  }
+}
+
+// For
+@for $cont from 1 to 8 {
+  .listado ul li:nth-child(#{$cont}) {
+    color: orange;
+    font-size: #{$cont}px;
+  }
+}
