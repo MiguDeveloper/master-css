@@ -1,0 +1,53 @@
+$rojo: red;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+// herencia
+%caja {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border: 4px solid #222;
+  margin: 10px;
+}
+
+#layout {
+  border: 3px solid black;
+  padding: 5px;
+  display: flex;
+  /*flex-direction: row;
+  flex-wrap: wrap;*/
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  height: 600px;
+  align-items: flex-start;
+}
+
+.red {
+  @extend %caja;
+  background-color: $rojo;
+  align-self: flex-start;
+}
+
+.green {
+  @extend %caja;
+  background-color: green;
+  align-self: center;
+}
+
+.blue {
+  @extend %caja;
+  background-color: blue;
+  align-self: center;
+}
+
+.orange {
+  @extend %caja;
+  background-color: orange;
+  align-self: flex-end;
+}

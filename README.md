@@ -76,3 +76,33 @@ $ sass --watch style.scss style.css
 ### Mixins
 
 son conocidas con este termino pero son simple funciones que como tal agrupan una funcionalidad
+
+## Flexbox
+
+modulo de css que define un nuevo modelo de cajas, es una forma diferente a maquetar con los position y floats
+
+- order: podemos darle un orden especifico a los divs
+- flex-direction: row/column
+- flex-wrap: un contenedor para que los divs internos no sobrepasen el tamaño del contenedor
+- podemos resumir las dos propiedades en una sola con: flex-flow: row wrap
+- flex-grow: 1; le damos el mismo tamaño a cada una de las cajas y cuanto va a ocupar
+- flex-shrink: 0; reducir el tamaño de una caja
+- flex-basis: 25%; indica que tamaño base van a tener y a partir de cuanto van a crecer.
+
+#### Alineación horizontal:
+
+- justify-content: center; podemos alinear a la izquierda, derecha, centro sin nesidad de por ejemplo usar `margin: 0 auto;` porpiedades mas usadas:
+  - justify-content: flex-start; alineado a la derecha.
+  - justify-content: flex-end; alineado a la izquierda.
+  - justify-content: space-around; distribuye las cajas del centro de una manera mas pareja
+  - justify-content: space-between; el primero y el ultimo pegados a los laterales
+  - justify-content: space-evenly; parecido pero se alinean todos con espaciado todo distribuido pero para todas las cajas.
+
+#### Alineacion vertical
+
+Para ello nuestras cajas deben de tener un tamaño vertical:
+
+- align-items: center; alineamos vertical al centro
+- align-items: flex-end; alineamos vertical abajo.
+- align-items: flex-start; alineamos vertical arriba.
+- align-self: flex-end; alineamos un elemento especifico con self
