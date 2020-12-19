@@ -81,6 +81,7 @@ son conocidas con este termino pero son simple funciones que como tal agrupan un
 
 modulo de css que define un nuevo modelo de cajas, es una forma diferente a maquetar con los position y floats
 
+- display: flex; el div contenedor debe de tener esta propiedad.
 - order: podemos darle un orden especifico a los divs
 - flex-direction: row/column
 - flex-wrap: un contenedor para que los divs internos no sobrepasen el tamaño del contenedor
