@@ -20,7 +20,7 @@
 
 ### rotar logo
 
-```
+```css
 #logo .gear {
   display: block;
   float: left;
@@ -107,3 +107,54 @@ Para ello nuestras cajas deben de tener un tamaño vertical:
 - align-items: flex-end; alineamos vertical abajo.
 - align-items: flex-start; alineamos vertical arriba.
 - align-self: flex-end; alineamos un elemento especifico con self
+
+## Grid
+
+si queremos generar columnas iguales podemos usar repeat(4, calc(25% - 10px))
+podemos usar la fraccion con: fr y lograr tamaños mas balanceados
+
+```css
+.layout {
+  width: 1200px;
+  margin: 0 auto;
+  border: 3px solid orangered;
+  display: grid;
+  grid-template-columns: repeat(4, calc(25% - 10px));
+  gap: 10px;
+  padding: 10px;
+}
+```
+
+Si queremos generar filas
+
+```css
+.layout {
+  width: 1200px;
+  margin: 0 auto;
+  border: 3px solid orangered;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+```
+
+Para definir inicios y terminos de un div debemos de indicarle desde que linea comenzara y donde terminara
+el operador que indicara el 'to' es el slash `/`
+
+```css
+.red {
+  @extend %caja;
+  background-color: red;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* pero podemos resumir toda la descripcion en una sola linea*/
+.pink {
+  @extend %caja;
+  background-color: pink;
+  grid-column: 1 / 3;
+}
+```
