@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <header class="col-12 bg-primary text-white ps-5" id="header">
+          <h1>Este es el header</h1>
+        </header>
+        <nav id="menu" class="col-12 bg-secondary d-sm-none">
+          <ul class="row w-50">
+            <li class="col col-sm-12">Inicio</li>
+            <li class="col col-sm-12">Pagina 1</li>
+            <li class="col col-sm-12">Pagina 2</li>
+            <li class="col col-sm-12">Pagina 3</li>
+            <li class="col col-sm-12">Contacto</li>
+          </ul>
+        </nav>
+      </div>
+
+      <section id="content" class="row">
+        <section id="products" class="col-9 border">
+          <h2>Productos</h2>
+          <div class="items row">
+            <div class="item col col-md-12 bg-primary m-2">producto 1</div>
+            <div class="item col col-md-12 bg-primary m-2">producto 2</div>
+            <div class="item col col-md-12 bg-primary m-2">producto 3</div>
+          </div>
+          <div class="row mt-1 justify-content-center">
+            <div class="item col-3 bg-primary m-2">producto 1</div>
+            <div class="item col-3 bg-primary m-2">producto 2</div>
+          </div>
+          <div class="items row">
+            <div class="item col-2 bg-primary">producto 1</div>
+            <div class="item col-2 bg-primary">producto 2</div>
+            <div class="item col-2 bg-primary">producto 3</div>
+            <div class="item col-2 bg-primary offset-1">producto 3</div>
+          </div>
+        </section>
+        <aside class="col-3 border">
+          <h2>Barra lateral</h2>
+          <div class="row lateral bg-light align-items-center">
+            <div class="col-4 bg-primary order-3">Elemento 1</div>
+            <div class="col-4 bg-success order-1">Elemento 2</div>
+            <div class="col-4 bg-warning order-2">Elemento 3</div>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="row bg-info p-2">&copy; Miguel Chinchay</footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

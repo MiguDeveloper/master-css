@@ -158,3 +158,7 @@ el operador que indicara el 'to' es el slash `/`
   grid-column: 1 / 3;
 }
 ```
+
+## Bootstrap
+
+cuando queremos hacer un 'margin:0 auto' para un 'div' podemos usar la clase `mx-auto`
