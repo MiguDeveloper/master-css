@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  display: none;
+}
+
+#newletter {
+  display: none;
+}
+#newletter:checked + ul {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
