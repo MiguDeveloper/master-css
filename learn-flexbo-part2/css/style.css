@@ -1,7 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap");
 * {
-  margin: 10px;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 .padre {
@@ -9,76 +18,163 @@
   flex-flow: column nowrap;
 }
 
+.margen-interno {
+  padding: 0 50px;
+}
+
 .header {
-  background-color: black;
+  background: url("../images/bg-2.jpg");
+  background-position: center;
+  background-attachment: contain;
+  background-size: cover;
   display: flex;
   flex-flow: column nowrap;
 }
 .header .menu {
-  background-color: #2d4059;
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
-  height: 100px;
+  height: 60px;
   align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .header .menu .logo {
-  background-color: #ea5455;
   flex: 1 1 auto;
-  height: 30px;
+}
+.header .menu .logo a {
+  color: white;
+  font-size: 30px;
+}
+.header .menu .logo a:hover {
+  color: #343434;
 }
 .header .menu .nav {
-  background-color: #ea5455;
   flex: 5 1 auto;
-  height: 30px;
+}
+.header .menu .nav a {
+  color: white;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  letter-spacing: 2px;
+}
+.header .menu .nav a:hover {
+  color: #343434;
 }
 .header .menu .social {
-  background-color: #ea5455;
   flex: 1 1 auto;
-  height: 30px;
+  display: flex;
+}
+.header .menu .social a {
+  font-size: 18px;
+  color: white;
+  padding: 0 5px;
+}
+.header .menu .social a:hover {
+  color: #343434;
 }
 .header .texto-principal {
-  background-color: #f07b3f;
+  height: 580px;
+  display: flex;
+  align-items: center;
 }
 .header .texto-principal h1 {
-  background-color: #ffd460;
+  font-family: "Lora", serif;
+  font-size: 21px;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.6;
 }
 
 .section {
-  background-color: black;
+  background-color: #f7f7f7;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
 }
 .section .articulos {
-  background-color: #4e4e6a;
+  background-color: #f7f7f7;
   flex: 2 1 auto;
   display: flex;
   flex-flow: row wrap;
 }
 .section .articulos .article {
-  background-color: #1f6cb0;
   flex: 1 1 40%;
+  color: #444444;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 10px 10px 0 0;
+  flex: 1 1 45%;
+  background: #ececec;
+}
+.section .articulos .article img {
+  width: 100%;
+}
+.section .articulos .article h3 {
+  color: white;
+  font-size: 13px;
+  padding: 10px 0;
+  margin-top: -80px;
+}
+.section .articulos .article h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  padding: 0 0 10px 0;
+  color: white;
+}
+.section .articulos .article a {
+  color: white;
+  font-size: 13px;
+  padding: 10px;
+  background-color: #000;
+  margin: 10px 0;
+  display: inline-block;
+}
+.section .articulos .article a:hover {
+  background-color: #546cc3;
 }
 .section .articulos .navegacion {
-  background-color: #70a3c4;
+  background-color: black;
   flex: 1 1 100%;
+  margin: 10px 10px 0 0;
+}
+.section .articulos .navegacion a {
+  color: white;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  letter-spacing: 2px;
 }
 .section .aside {
   flex: 1 1 auto;
-  background-color: #f73f52;
+  margin: 10px 5px 10px 0;
 }
-.section .aside .publicidad {
-  background-color: #ffea85;
+.section .aside .publicidad h4 {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.section .aside .publicidad img {
+  width: 100%;
 }
 
 .footer {
   background-color: black;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 .footer .pie {
-  background-color: #e6af2e;
-  width: 300px;
+  text-align: center;
+}
+.footer .pie a {
+  color: white;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  letter-spacing: 2px;
 }
 
 @media all and (max-width: 800px) {
