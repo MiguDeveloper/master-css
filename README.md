@@ -1,3 +1,10 @@
+### Emmet shortcuts
+
+- `lorem10` un texto con 5 palabras
+- `(p>lorem10)*10` obtenemos 10 parrafos con 10 palabras cada uno
+- `h1{contenido}` obtenemos ```<h1>contenido</h1>````
+- `ul>li.clase$*10{item $}` obtenmos una lista con 10 items con contenido 1 hasta contenido 10
+
 ### Sombras
 
 - Si queremos aplicar sombras a los elementos de texto aplicamos la propiedad `text-shadow` ('eje x', 'eje y', 'difuminado', 'color').
